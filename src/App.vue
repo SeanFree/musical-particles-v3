@@ -32,11 +32,13 @@ import {
 } from '@/mixins/events/events.type'
 import { vEvents } from '@/mixins'
 import vLoader from '@/components/vLoader'
+import vLayerMenu from '@/components/vLayerMenu'
 
 export default {
 	name: 'MusicalParticlesV3',
 	components: {
-		'v-loader': vLoader
+		'v-loader': vLoader,
+		'v-layer-menu': vLayerMenu
 	},
 	mixins: [vEvents],
 	computed: {
