@@ -1,0 +1,5 @@
+export const E_SELECT_TRACK = 'track-select'
+export const E_TOGGLE_VISUAL_CONTROL = 'toggle-visual-control'
+export const E_FILE_UPLOAD = 'file-upload'
+export const E_CLOSE_MENUS = 'close-menus'
+export const E_FILE_DROPPED = 'file-dropped'

@@ -1,0 +1,10 @@
+$layers: (
+	background: 0,
+	content: 1,
+	interface: 2,
+	overlay: 3
+);
+
+@function z($name){
+	@return map-get($layers, $name);
+}
