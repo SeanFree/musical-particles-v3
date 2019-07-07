@@ -24,6 +24,9 @@ import {
 	E_CLOSE_MENUS,
 	E_SELECT_TRACK
 } from '@/mixins/events/events.type'
+import vAudio from '@/components/vAudio'
+import vFileUpload from '@/components/vFileUpload'
+import vTrackSelector from '@/components/vTrackSelector'
 
 export default {
 	name: 'vAudioMenu',

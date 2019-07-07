@@ -38,3 +38,19 @@ export const vmin = p => min(vh(p), vw(p))
 export const vmax = p => max(vh(p), vw(p))
 export const clamp = (n, _min, _max) => min(max(n, _min), _max)
 export const norm = (n, _min, _max) => (n - _min) / (_max - _min)
+
+export const pad = (n, len = 2, char = '0') => {
+	let result = `${n}`
+
+	while (result.length < len) {
+		result = `${char}${result}`
+	}
+
+	return result
+}
+
+export const sToTime = s => {
+	return `${pad(parseInt(s / 60))}:${pad(parseInt(s % 60))}`
+}
+
+export const clone = o => JSON.parse(JSON.stringify(o))
