@@ -1,5 +1,7 @@
 # musical-particles-v3
 
+The alpha version can be viewed on [CodePen](https://codepen.io/seanfree/pen/MdRJvp)
+
 ## Project setup
 ```
 yarn install
