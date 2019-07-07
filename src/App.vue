@@ -15,7 +15,7 @@
 					vLoader(:loading="loadingTrack")
 				.v-app__layer-menu
 					vLayerMenu(ref="layerMenu" :layers="layers")
-		v-audio-menu(ref="menu")
+		vAudioMenu(ref="menu")
 		.v-app__drag-overlay(:class="{ 'v-app__drag-overlay--dragging': dragging }")
 			i.material-icons.v-app__drag-icon note_add
 		v-app-intro(@skip-intro="introSkipped")
@@ -33,12 +33,14 @@ import {
 import { vEvents } from '@/mixins'
 import vLoader from '@/components/vLoader'
 import vLayerMenu from '@/components/vLayerMenu'
+import vAudioMenu from '@/components/vAudioMenu'
 
 export default {
 	name: 'MusicalParticlesV3',
 	components: {
 		vLoader,
-		vLayerMenu
+		vLayerMenu,
+		vAudioMenu
 	},
 	mixins: [vEvents],
 	computed: {
