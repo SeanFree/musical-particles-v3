@@ -9,7 +9,7 @@
 				i.material-icons {{ layer.icon }}
 			ul.v-layer-menu__list
 				li.v-layer-menu__item(v-for="(item, key) in layer.options" :key="key")
-					v-dropdown(
+					vDropdown(
 						v-if="item.type === 'string'"
 						:id="name + key"
 						:label="key"
@@ -17,7 +17,7 @@
 						:value="item.value"
 						@change="onChange(name, key, item, $event)"
 					)
-					v-checkbox(
+					vCheckbox(
 						v-if="item.type === 'boolean'"
 						:id="name + key"
 						:label="key"
@@ -25,7 +25,7 @@
 						:value="item.value"
 						@change="onChange(name, key, item, $event)"
 					)
-					v-range(
+					vRange(
 						type="range"
 						v-model="item.value"
 						v-if="item.type === 'number'"
@@ -45,10 +45,18 @@ import {
 	E_CLOSE_MENUS,
 	E_LAYER_UPDATE
 } from '@/mixins/events/events.type'
+import vDropdown from '@/components/vDropdown'
+import vCheckbox from '@/components/vCheckbox'
+import vRange from '@/components/vRange'
 
 export default {
 	name: 'vLayerMenu',
 	mixins: [vEvents],
+	components: {
+		vDropdown,
+		vCheckbox,
+		vRange
+	},
 	props: {
 		layers: {
 			type: Object,

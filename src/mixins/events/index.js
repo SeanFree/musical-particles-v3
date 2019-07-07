@@ -1,10 +1,10 @@
 import Vue from 'vue'
 
 const eventHub = new Vue()
-export default Vue.mixin({
+export default {
 	data() {
 		return {
 			eventHub
 		}
 	}
-})
+}
