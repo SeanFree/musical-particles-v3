@@ -17,6 +17,7 @@ const state = {
 }
 
 Vue.use(Vuex)
+Vue.config.devtools = true
 
 export default new Vuex.Store({
 	state,

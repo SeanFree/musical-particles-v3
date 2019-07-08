@@ -25,6 +25,10 @@ export default {
 		checked: {
 			type: Boolean,
 			required: false
+		},
+		value: {
+			type: Boolean,
+			required: false
 		}
 	}
 }

@@ -1,4 +1,4 @@
-import CompositeLayer from '@/controllers/CanvasCompositer'
+import CompositeLayer from '@/controllers/CompositeLayer'
 
 export default class CanvasCompositer extends CompositeLayer {
 	constructor(el, x, y, w, h) {

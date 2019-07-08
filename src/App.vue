@@ -18,7 +18,7 @@
 		vAudioMenu(ref="menu")
 		.v-app__drag-overlay(:class="{ 'v-app__drag-overlay--dragging': dragging }")
 			i.material-icons.v-app__drag-icon note_add
-		v-app-intro(@skip-intro="introSkipped")
+		vAppIntro(@skip-intro="introSkipped")
 </template>
 
 <script>
@@ -37,13 +37,16 @@ import { vEvents } from '@/mixins'
 import vLoader from '@/components/vLoader'
 import vLayerMenu from '@/components/vLayerMenu'
 import vAudioMenu from '@/components/vAudioMenu'
+import vAppIntro from '@/components/vAppIntro'
+import VisualizerApp from '@/VisualizerApp'
 
 export default {
 	name: 'MusicalParticlesV3',
 	components: {
 		vLoader,
 		vLayerMenu,
-		vAudioMenu
+		vAudioMenu,
+		vAppIntro
 	},
 	mixins: [vEvents],
 	computed: {
@@ -113,6 +116,21 @@ export default {
 	},
 	created() {
 		this[SET_TRACK_LIST](this.tracks)
+	},
+	mounted() {
+		const {
+			canvas,
+			menu: {
+				$refs: {
+					audio: {
+						analyser
+					}
+				}
+			}
+		} = this.$refs
+
+		window.visApp = new VisualizerApp(this, canvas, analyser)
+		window.visApp.init()
 	}
 }
 </script>

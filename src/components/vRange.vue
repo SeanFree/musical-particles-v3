@@ -34,6 +34,10 @@ export default {
 		step: {
 			type: Number,
 			required: true
+		},
+		value: {
+			type: Number,
+			required: false
 		}
 	},
 	methods: {
