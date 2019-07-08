@@ -22,7 +22,10 @@
 </template>
 
 <script>
-import { mapGetters, mapMutations } from 'vuex'
+import {
+	mapGetters,
+	mapMutations
+} from 'vuex'
 import { LOADING_TRACK } from '@/store/getters.type'
 import { SET_TRACK_LIST } from '@/store/mutations.type'
 import {
@@ -191,6 +194,27 @@ export default {
     border: 4px solid;
     border-radius: 50%;
     padding: $space-m;
+	}
+}
+
+.v-button {
+	box-sizing: border-box;
+	padding: $space-xs $space-s;
+	border-radius: 2px;
+	font-family: "Open Sans", sans-serif;
+	outline: none;
+	color: $white;
+	cursor: pointer;
+
+	&--primary {
+		background-color: $cyan-4;
+		border: 0;
+	}
+
+	&--secondary {
+		border: 1px solid;
+		background-color: transparent;
+		color: $cyan-4;
 	}
 }
 
