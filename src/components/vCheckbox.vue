@@ -33,3 +33,32 @@ export default {
 	}
 }
 </script>
+
+<style lang="scss">
+.v-input--checkbox {
+	display: none;
+
+	&:checked + &__el {
+		.material-icons {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+
+	&__el {
+		width: $size-s;
+		height: $size-s;
+		border-radius: 2px;
+		background-color: $gray-9;
+		cursor: pointer;
+
+		.material-icons {
+			font-size: $size-s;
+			color: $cyan-2;
+			opacity: 0;
+			transform: scale(0.8);
+			transition: opacity $transition-duration-s, transform $transition-duration-s;
+		}
+	}
+}
+</style>

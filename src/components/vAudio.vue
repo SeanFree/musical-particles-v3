@@ -333,6 +333,7 @@ export default {
 			max-width: 440px;
 			height: $space-xs;
 			display: block;
+			border: 0;
 			border-radius: 0.5 * $space-xs;
 			margin: 0 $space-m;
 			cursor: pointer;

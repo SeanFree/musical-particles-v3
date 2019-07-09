@@ -11,7 +11,7 @@
 				li.v-layer-menu__item(v-for="(item, key) in layer.options" :key="key")
 					vDropdown(
 						v-if="item.type === 'string'"
-						:id="name + key"
+						:id="`${name}-${key}`"
 						:label="key"
 						:options="item.options"
 						:value="item.value"
@@ -19,7 +19,7 @@
 					)
 					vCheckbox(
 						v-if="item.type === 'boolean'"
-						:id="name + key"
+						:id="`${name}-${key}`"
 						:label="key"
 						:checked="item.value"
 						:value="item.value"
@@ -29,7 +29,7 @@
 						type="range"
 						v-model="item.value"
 						v-if="item.type === 'number'"
-						:id="name + key"
+						:id="`${name}-${key}`"
 						:label="key"
 						:value="item.value"
 						:min="item.min"

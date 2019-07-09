@@ -29,3 +29,16 @@ export default {
 	}
 }
 </script>
+
+<style lang="scss" scoped>
+.v-input--select {
+	cursor: pointer;
+	padding: $space-2xs;
+	border: 0;
+	border-radius: 2px;
+	background-color: $gray-9;
+	font-family: "Open Sans", sans-serif;
+	color: $white;
+	outline: none;
+}
+</style>

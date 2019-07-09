@@ -93,6 +93,9 @@ export default {
 			this.uploadStarted = true
 		},
 		cancelUpload() {
+			this.title = null
+			this.artist = null
+			this.$refs.fileInput.files = null
 			this.uploadStarted = false
 		},
 		uploadFile() {
@@ -102,10 +105,7 @@ export default {
 				title: this.title,
 				artist: this.artist
 			})
-			this.title = null
-			this.artist = null
-			this.$refs.fileInput.files = null
-			this.uploadStarted = false
+			this.cancelUpload()
 		},
 		fileDropped($data) {
 			this.$refs.fileInput.files = $data

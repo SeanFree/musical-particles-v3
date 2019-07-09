@@ -148,7 +148,7 @@ export default {
 }
 
 .content-wrapper {
-	max-width: $breakpoint-3;
+	max-width: $breakpoint-4;
 	padding: 0 $space-m;
 	margin: $space-m auto 0;
 	box-sizing: border-box;
@@ -272,33 +272,6 @@ export default {
 		cursor: default;
 	}
 
-	&--checkbox {
-		display: none;
-
-		&:checked + &__el {
-			.material-icons {
-				opacity: 1;
-				transform: scale(1);
-			}
-		}
-
-		&__el {
-			width: $size-s;
-			height: $size-s;
-			border-radius: 2px;
-			background-color: $gray-9;
-			cursor: pointer;
-
-			.material-icons {
-				font-size: $size-s;
-				color: $cyan-2;
-				opacity: 0;
-				transform: scale(0.8);
-				transition: opacity $transition-duration-s, transform $transition-duration-s;
-			}
-		}
-	}
-
 	&--text {
 		padding: $space-xs $space-s;
 		border: 0;
@@ -328,82 +301,6 @@ export default {
 		&:-moz-placeholder {
 			color: $gray-5;
 			opacity: 1;
-		}
-	}
-
-	&--select {
-		cursor: pointer;
-		padding: $space-2xs;
-		border: 0;
-		border-radius: 2px;
-		background-color: $gray-9;
-		font-family: "Open Sans", sans-serif;
-		color: $white;
-		outline: none;
-	}
-
-	&--range {
-		height: $space-m;
-		margin-right: $space-s;
-		background-color: transparent;
-		color: transparent;
-		cursor: pointer;
-		-webkit-appearance: none;
-		transition: opacity $transition-duration-s;
-
-		&:focus {
-			outline: none;
-		}
-
-		&::-webkit-slider-runnable-track {
-			width: 100%;
-			height: $space-2xs;
-			-webkit-appearance: none;
-			background: $gray-8;
-		}
-
-		&::-webkit-slider-thumb {
-			position: relative;
-			margin-top: -0.4 * $size-xs;
-			height: $size-xs;
-			width: $size-xs;
-			border-radius: 50%;
-			background: $cyan-2;
-			-webkit-appearance: none;
-		}
-
-		&::-moz-slider-runnable-track {
-			width: 100%;
-			height: 2px;
-			background: $gray-8;
-		}
-
-		&::-moz-slider-thumb {
-			height: 14px;
-			width: 14px;
-			border-radius: 50%;
-			background: $cyan-2;
-			cursor: pointer;
-			-webkit-appearance: none;
-			margin-top: -6px;
-		}
-
-		&::-moz-range-track {
-			width: 100%;
-			height: 2px;
-			cursor: pointer;
-			background: $gray-8;
-		}
-
-		&::-moz-range-thumb {
-			height: 16px;
-			width: 16px;
-			border-radius: 50%;
-			border: 2px solid $gray-8;
-			background: transparent;
-			cursor: ew-resize;
-			-webkit-appearance: none;
-			margin-top: -7px;
 		}
 	}
 }

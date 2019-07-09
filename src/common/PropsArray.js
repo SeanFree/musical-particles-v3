@@ -1,22 +1,3 @@
-import { lerp } from '@/common/util'
-
-/* eslint-disable no-extend-native */
-Array.prototype.lerp = function(t = [], a = 0) {
-	this.forEach((n, i) => (this[i] = lerp(n, t[i], a)))
-}
-
-Float32Array.prototype.get = function(i = 0, n = 0) {
-	const t = i + n
-
-	let r = []
-
-	for (; i < t; i++) {
-		r.push(this[i])
-	}
-
-	return r
-}
-
 export default class PropsArray {
 	constructor(count = 0, props = []) {
 		this.count = count
